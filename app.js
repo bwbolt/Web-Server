@@ -7,7 +7,7 @@ const server = http.createServer(function (req, res) {
   fs.readFile('index.html', function (error, data) {
     if (error) {
       res.writeHead(404)
-      res.write('eroor:file not found')
+      res.write('Error:file not found')
     } else {
       res.write(data)
     }
@@ -17,9 +17,9 @@ const server = http.createServer(function (req, res) {
 
 server.listen(port, function (error) {
   if (error) {
-    console.log('something went wrong', error)
+    console.log('Something went wrong', error)
   } else {
-    console.log('server is listening to port' + port)
+    console.log('Server is listening to port' + port)
   }
 })
 
